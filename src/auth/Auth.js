@@ -9,10 +9,10 @@ const Auth = (props) => {
     return (
         <Container className="auth-container">
             <Row>
-                <Col md="6">
+                <Col md="6" className="signup-col">
                     <Signup updateToken={props.updateToken} />
                 </Col>
-                <Col className="login-col" md="6">
+                <Col md="6" className="login-col">
                     <Login updateToken={props.updateToken} />
                 </Col>
             </Row>
