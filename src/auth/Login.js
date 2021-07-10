@@ -3,7 +3,7 @@ import {Form, FormGroup, Label, Input, Button} from "reactstrap";
 
 const Login = (props) => {
     const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+    const [passwordhash, setPasswordHash] = useState("");
 
         let handleSubmit = (event) => {
         event.preventDefault();
@@ -11,7 +11,7 @@ const Login = (props) => {
         
             method: "POST",
             body: JSON.stringify({
-                user: { username: username, password: password },
+                user: { username: username, passwordhash: passwordhash },
             }),
             headers: new Headers({
                 "Content-Type": "application/json",
@@ -40,9 +40,9 @@ const Login = (props) => {
                 <FormGroup>
                     <Label htmlFor="password">Password</Label>
                     <Input
-                        onChange={(e) => setPassword(e.target.value)}
-                        name="password"
-                        value={password}
+                        onChange={(e) => setPasswordHash(e.target.value)}
+                        name="passwordhash"
+                        value={passwordhash}
                     />
                 </FormGroup>
                 <Button type="submit">Login</Button>
