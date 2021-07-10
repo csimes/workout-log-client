@@ -30,7 +30,7 @@ const Login = (props) => {
             <h1>Login</h1>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
-                    <Label htmFor="username">Username</Label>
+                    <Label htmlFor="username">Username</Label>
                     <Input
                         onChange={(e) => setUsername(e.target.value)}
                         name="username"
